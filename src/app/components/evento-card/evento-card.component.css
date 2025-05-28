@@ -1,0 +1,12 @@
+.evento-card {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s ease;
+  background-color: white;
+}
+
+.evento-card:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}

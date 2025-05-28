@@ -1,0 +1,19 @@
+<div>
+  <h1>{{ titulo }}</h1>
+  <p>{{ descricao }}</p>
+  <p>Data do evento: {{ dataEvento }}</p>
+
+  <!-- Diretiva *ngIf para exibir detalhes -->
+  <div *ngIf="mostrarDetalhes">
+    <h2>Destaques:</h2>
+    <ul>
+      <!-- Diretiva *ngFor para listar os destaques -->
+      <li *ngFor="let destaque of destaques">{{ destaque }}</li>
+    </ul>
+  </div>
+
+  <!-- Botão para alternar exibição -->
+  <button (click)="mostrarDetalhes = !mostrarDetalhes">
+    {{ mostrarDetalhes ? 'Ocultar' : 'Mostrar' }} Destaques
+  </button>
+</div>

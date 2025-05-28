@@ -1,0 +1,14 @@
+<div class="card" [appHoverBorder]="'#FF5100'">
+  <h3>{{ nomeEvento }}</h3>
+  <p>Participe deste evento para aprender sobre as inovações no Angular 17.</p>
+
+  <button (click)="participar()">Participar</button>
+
+  <p *ngIf="inscrito" style="margin-top: 10px; color: green;">
+    Você se inscreveu no evento: {{ nomeEvento }}
+  </p>
+</div>
+
+<app-evento-card *ngFor="let evento of eventos" [titulo]="evento.titulo" [data]="evento.data" [horario]="evento.horario"
+  [local]="evento.local">
+</app-evento-card>
